@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>LIST-APP</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
@@ -11,7 +12,7 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron ">
             <h1>Vegatable & Fruit List</h1>
         </div>
     </div>
@@ -22,12 +23,17 @@
             <div class="form-group col-md-6 col-lg-4 col-xl-3">
                 <h2>Add Item</h2>
                 <label for="Name">Name</label>
-                <input class="form-control" type="text" id="Name"><br>
+                <input class="form-control" type="text" id="Name" required><br>
                 <label for="Price">Price</label>
-                <input class="form-control" type="text" id="Price"><br>
+                <input class="form-control" type="text" id="Price" required/><br>
                 <label for="KG">KG</label>
-                <input class="form-control" type="number" id="KG"><br>
+                <input class="form-control"  type="number" id="KG" required><br>
                 <button class="btn btn-info" onclick="Add()">Add</button>
+                <br>
+                <div class="alert alert-warning" id="warn_add" style="display: none;">
+                    <strong>Warning!</strong> Field is required
+                </div>
+
                 <br><br>
             </div>
             <div class="col-md-6 col-lg-4 col-xl-3">
@@ -35,6 +41,10 @@
                 <label for="Del">Row</label><br>
                 <input class="form-control" type="number" id="Del"><br>
                 <button class="btn btn-info" onclick="Delete()">Delete</button>
+                <br><br>
+                <div class="alert alert-warning" id="warn_del" style="display: none;">
+                    <strong>Warning!</strong> Row cannot be Deleted.
+                </div>
 
 
             </div>
@@ -65,9 +75,6 @@
                     </tr>
                 </table>
                 <br>
-                <div class="alert alert-warning" id="warn" style="display: none;">
-                    <strong>Warning!</strong> Row cannot be Deleted.
-                </div>
             </div>
         </div>
     </div>
