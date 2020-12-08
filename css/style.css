@@ -1,7 +1,23 @@
-.table {
-  background-color: cadetblue;
-}
-
 body {
   background-color: lightsteelblue;
+}
+
+table {
+  background-color: #dae5f0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.jumbotron {
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-title {
+  background-color: #747a80;
 }
